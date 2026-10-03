@@ -1,0 +1,9 @@
+streamlit
+torch
+torchvision
+Pillow
+numpy
+matplotlib
+opencv-python-headless
+streamlit-lottie
+requests

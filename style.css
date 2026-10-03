@@ -1,0 +1,93 @@
+/* --- style.css (Version Corrigée) --- */
+[data-testid="stAppViewContainer"] {
+  background-color: lab(97.7449% -1.30808 1.21219);
+  color: #1f2937 !important;
+}
+
+/* Forcer la lisibilité des textes markdown standards dans le conteneur */
+[data-testid="stAppViewContainer"] p,
+[data-testid="stAppViewContainer"] span,
+[data-testid="stAppViewContainer"] label {
+  color: #2d3748;
+}
+
+/* --- PERSONNALISATION DE LA BARRE LATÉRALE (Sidebar - Mode Clair) --- */
+[data-testid="stSidebar"] {
+  background-color: #e8f0ec; /* Vert-gris doux et naturel pour l'agriculture */
+  border-right: 1px solid #d1e2d9;
+}
+
+/* Textes et éléments à l'intérieur de la sidebar en mode clair */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] .stMarkdown {
+  color: #1e3d59 !important;
+}
+
+/* En-tête principal */
+.header-container {
+  background: linear-gradient(135deg, #1e3d59 0%, #17b978 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white !important;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.header-container h1 {
+  color: white !important;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.header-container p {
+  color: #e0e0e0 !important;
+  font-size: 1.1rem;
+}
+/* CORRECTIF : Forcer la couleur des carrés de légende dans la sidebar */
+.legend-color-box {
+  color: var(--color-override) !important;
+  font-weight: bold;
+  margin-right: 8px;
+}
+/* Badges de sévérité */
+.badge-healthy {
+  background-color: #10b981;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+.badge-moderate {
+  background-color: #f59e0b;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+.badge-critical {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Boutons */
+.stButton > button {
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+#MainMenu {
+  visibility: hidden;
+}
+footer {
+  visibility: hidden;
+}
