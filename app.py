@@ -241,9 +241,9 @@ RECOMMENDATIONS = {
 
 # --- BARRE LATÉRALE (Sidebar) ---
 with st.sidebar:
-    st.image("logo/logo-agrosentinel.png", width=200, caption="AgriSentinel - Diagnostic Phytosanitaire")
+    st.image("logo/logo-agrosentinel.png", width=130, caption="AgriSentinel - Diagnostic Phytosanitaire")
     st.markdown("---")
-    
+    # Mode sombre toggle
     darkMode = st.toggle("🌙 Mode Sombre", value=False)
     
     if darkMode:
@@ -299,7 +299,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 col_upload, col_preview = st.columns([1, 1], gap="large")
-
+# --- SECTION D'IMPORTATION ET D'APERÇU DE L'IMAGE ---
 with col_upload:
     st.markdown("### <i class='fas fa-cloud-upload-alt'></i> 1. Importer un cliché", unsafe_allow_html=True)
     uploaded_file = st.file_uploader(
@@ -313,7 +313,7 @@ with col_upload:
         analyze_btn = False
         if "analysis_done" in st.session_state:
             del st.session_state.analysis_done
-
+# --- SECTION D'APERÇU DE L'IMAGE ---
 with col_preview:
     if uploaded_file is not None:
         st.markdown("### <i class='fas fa-image'></i> 2. Aperçu de l'image source", unsafe_allow_html=True)
@@ -328,7 +328,7 @@ if analyze_btn and uploaded_file is not None:
             if lottie_scanning:
                 st_lottie(lottie_scanning, height=180, key="scan_animation")
             st.markdown("<p style='text-align: center; color: #555;'><i class='fas fa-spinner fa-spin'></i> Analyse neuronale et calcul Grad-CAM en cours...</p>", unsafe_allow_html=True)
-
+        # --- INFÉRENCE ET GRAD-CAM ---
         try:
             pil_img = Image.open(uploaded_file).convert("RGB")
             input_tensor = transform(pil_img).unsqueeze(0).to(DEVICE)
@@ -423,7 +423,7 @@ if st.session_state.get("analysis_done", False):
             
             st.markdown(f"""
                 <div style="background-color: #FFFFFF; padding: 1.5rem; border-radius: 8px; border-left: 6px solid {border_col}; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1rem;">
-                    <h4 style="margin-top:0; color: #1E3D59;"><i class='fas fa-search'></i> Symptômes observés :</h4>
+                    <h4 style="margin-top:0; color: #1E3D59;"><i class='fas fa-search'></i> symptômes typiques :</h4>
                     <ul style="padding-left: 0; list-style: none; color: #333333; line-height: 1.5;">
                         {symptomes_html}
                     </ul>
