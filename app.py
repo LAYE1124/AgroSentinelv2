@@ -399,7 +399,11 @@ if st.session_state.get("analysis_done", False):
 
     m_col1, m_col2, m_col3 = st.columns(3)
     with m_col1:
-        st.metric(label="Diagnostic Principal", value=reco.get("titre", class_name))
+        st.markdown(
+            f"**Diagnostic Principal**<br><span style='font-size: 1.5rem; font-weight: 600;'>"
+            f"{reco.get('titre', class_name.replace('_', ' '))}</span>",
+            unsafe_allow_html=True
+        )
     with m_col2:
         st.metric(label="Indice de Confiance", value=f"{confidence}%")
     with m_col3:
