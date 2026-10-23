@@ -158,7 +158,7 @@ RECOMMENDATIONS = {
         "traitement_chimique": "Fongicides à base de cuivre ou de mancozèbe en cas de forte pression climatique."
     },
     "Tomato_leaf": {
-        "titre": "Plante Saine (Healthy)",
+        "titre": "Feuille Saine (Healthy)",
         "severite": "Nulle",
         "badge_class": "badge-healthy",
         "border_color": "#10B981",
@@ -171,7 +171,7 @@ RECOMMENDATIONS = {
         "traitement_chimique": "Aucun traitement chimique nécessaire."
     },
     "Tomato_leaf_bacterial_spot": {
-        "titre": "Tache bactérienne (Bacterial Spot)",
+        "titre": "Gale bactérienne (Bacterial Spot)",
         "severite": "Élevée",
         "badge_class": "badge-critical",
         "border_color": "#EF4444",
@@ -199,7 +199,7 @@ RECOMMENDATIONS = {
         "traitement_chimique": "Mancozèbe, métalaxyl-M, cyazofamide. Traitement tous les 7-10 jours en conditions humides. Alternance des matières actives pour éviter la résistance."
     },
     "Tomato_leaf_mosaic_virus": {
-        "titre": "Virus de la mosaïque (Tomato Mosaic Virus)",
+        "titre": "Mosaïque de la tomate (Tomato Mosaic Virus)",
         "severite": "Élevée",
         "badge_class": "badge-critical",
         "border_color": "#EF4444",
@@ -212,7 +212,7 @@ RECOMMENDATIONS = {
         "traitement_chimique": "Aucun traitement curatif chimique antiviral direct. Lutte axée sur l'éradication des vecteurs et des plants malades."
     },
     "Tomato_leaf_yellow_virus": {
-        "titre": "Virus des feuilles jaunes en cuillère (TYLCV)",
+        "titre": "Enroulement jaune (TYLCV)",
         "severite": "Élevée",
         "badge_class": "badge-critical",
         "border_color": "#EF4444",
@@ -225,7 +225,7 @@ RECOMMENDATIONS = {
         "traitement_chimique": "Application d'insecticides ciblés contre les mouches blanches ou utilisation de savons noirs pour réduire les populations vectrices."
     },
     "Tomato_mold_leaf": {
-        "titre": "Moisi des feuilles / Cladosporiose (Mold Leaf)",
+        "titre": "Moisissure olivaire (Mold Leaf)",
         "severite": "Modérée",
         "badge_class": "badge-moderate",
         "border_color": "#F59E0B",
